@@ -28,7 +28,7 @@ def return_hwnd(name: str) -> tuple:
     win32gui.EnumWindows(get_all_hwnd, 0)
     for h, t in hwnd_title.items():
         if t:
-            print(h, t)
+            # print(h, t)
             if name in t:
                 # left, top, right, bottom = win32gui.GetWindowRect(h)
                 return win32gui.GetWindowRect(h), t
